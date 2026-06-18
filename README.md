@@ -20,23 +20,37 @@ Or install directly from GitHub:
 npx skills add rorkai/app-store-connect-cli-skills
 ```
 
-### As an ADG plugin (Claude Code / Codex)
+### As a plugin (ADG / Claude Code / Codex)
 
-This repo is also packaged as an [ADG](https://github.com/rbbtsn0w/adg) plugin
-named `asc`. The plugin is authored once in `.agents/.plugin.json` and projected
-to the Claude (`.claude-plugin/`) and Codex (`.codex-plugin/`) runtime layouts,
-so it can be consumed three ways:
+This repo is also packaged as a plugin named `asc`. It is authored once in
+`.agents/.plugin.json` ([ADG](https://github.com/rbbtsn0w/adg) source of truth)
+and projected to the Claude (`.claude-plugin/`) and Codex (`.codex-plugin/`)
+runtime layouts. The skills stay at the repo root, so the installers above keep
+working unchanged.
+
+**ADG**
 
 ```bash
-# ADG — installs into ~/.agents/plugins, then link into the runtimes you use
 adg plugins add rorkai/app-store-connect-cli-skills --global
 adg plugins link --target claude --global   # Claude Code
 adg plugins link --target codex  --global   # Codex
 ```
 
-Codex and Claude Code can also discover the plugin natively from this repo via
-the committed `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json`
-manifests.
+**Claude Code (native marketplace)** — discovers the plugin straight from this
+repo via `.claude-plugin/marketplace.json`:
+
+```bash
+claude plugin marketplace add rorkai/app-store-connect-cli-skills
+claude plugin install asc@asc
+```
+
+**Codex** — Codex resolves plugins from a marketplace subdirectory, so install
+it through ADG, which lays the plugin out the way Codex expects:
+
+```bash
+adg plugins add rorkai/app-store-connect-cli-skills --global
+adg plugins link --target codex --global
+```
 
 ## Available Skills
 

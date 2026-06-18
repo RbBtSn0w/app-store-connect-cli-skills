@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "asc",
+  "description": "Agent Skills for the asc CLI (App Store Connect).",
+  "owner": {
+    "name": "Rudrank Riyam",
+    "url": "https://github.com/rorkai"
+  },
+  "plugins": [
+    {
+      "name": "asc",
+      "description": "Agent Skills for shipping with the asc CLI: builds, TestFlight, metadata, submissions, signing, and Apple Ads workflows.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Rudrank Riyam",
+        "url": "https://github.com/rorkai"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

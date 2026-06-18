@@ -1,0 +1,4 @@
+# Keep JSON/Markdown payloads at LF so runtime manifests parse identically
+# across platforms.
+*.md text eol=lf
+*.json text eol=lf
