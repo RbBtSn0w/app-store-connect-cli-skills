@@ -20,6 +20,24 @@ Or install directly from GitHub:
 npx skills add rorkai/app-store-connect-cli-skills
 ```
 
+### As an ADG plugin (Claude Code / Codex)
+
+This repo is also packaged as an [ADG](https://github.com/rbbtsn0w/adg) plugin
+named `asc`. The plugin is authored once in `.agents/.plugin.json` and projected
+to the Claude (`.claude-plugin/`) and Codex (`.codex-plugin/`) runtime layouts,
+so it can be consumed three ways:
+
+```bash
+# ADG — installs into ~/.agents/plugins, then link into the runtimes you use
+adg plugins add rorkai/app-store-connect-cli-skills --global
+adg plugins link --target claude --global   # Claude Code
+adg plugins link --target codex  --global   # Codex
+```
+
+Codex and Claude Code can also discover the plugin natively from this repo via
+the committed `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json`
+manifests.
+
 ## Available Skills
 
 ### asc-cli-usage

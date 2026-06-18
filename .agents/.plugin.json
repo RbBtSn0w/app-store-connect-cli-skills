@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "adg.plugin/v1",
+  "name": "asc",
+  "version": "0.1.0",
+  "description": "Agent Skills for shipping with the asc CLI: builds, TestFlight, metadata, submissions, signing, and Apple Ads workflows for App Store Connect.",
+  "author": { "name": "Rudrank Riyam", "url": "https://github.com/rorkai" },
+  "license": "MIT",
+  "category": "Developer Tools",
+  "interface": { "displayName": "asc cli skills" },
+  "skills": "./skills/",
+  "homepage": "https://github.com/rorkai/app-store-connect-cli-skills"
+}
